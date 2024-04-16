@@ -1,0 +1,51 @@
+<div class="container">
+	<div class="card">
+		<div class="card-header">
+
+			<h3> LISTADO DE CELULARES </h3>
+
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Busca un celular" aria-level="Buscar"
+					[(ngModel)]="cel.marca" 
+					(ngModelChange)="buscarPorMarca()" aria-describedby="boton-buscar">
+			</div>
+
+		</div>
+		<div class="card-body">
+			<table class="table table-hover" border="1">
+				<thead> 
+					<tr class="text-center">
+						<th> ID </th>
+						<th> MARCA </th>
+						<th> MODELO </th>
+						<th> ALMACENAMIENTO </th>
+						<th> RAM </th>
+						<th> PROCESADOR </th>
+						<th> COLOR </th>
+						<th> ACCIONES </th>
+					</tr>
+				</thead>
+				<tbody>
+					@for (cel of celulares; track cel.id){
+					<tr>
+						<td> {{cel.id}} </td>
+						<td> {{cel.marca}} </td>
+						<td> {{cel.modelo}} </td>
+						<td> {{cel.almacenamiento}} </td>
+						<td> {{cel.ram}} </td>
+						<td> {{cel.procesador}} </td>
+						<td> {{cel.color}} </td>
+						<td>
+							<button class="btn btn-outline-warning" (click)="editar(cel)"> EDITAR </button>
+							<button class="btn btn-outline-danger" style="margin-left: 15px;" (click)="eliminar(cel)"> BORRAR
+							</button>
+						</td>
+					</tr>
+					} @empty{
+					<td colspan="8" style="text-align: center;"> NO EXISTEN REGISTROS </td>
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

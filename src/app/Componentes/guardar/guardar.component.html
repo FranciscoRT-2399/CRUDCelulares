@@ -1,0 +1,49 @@
+<div class="container">
+	<div class="card">
+		<div class="card-header">
+			<h3> REGISTRO DE CELULARES </h3>
+		</div>
+		<div class="card-body">
+			<form>
+				<!-- ? ngModel sirve para enlazar datos bidireccionalmente entre un elemento del formulario y una propiedad de un compenente de Angular -->
+				<div class="form-group">
+					<label for="id"> ID: </label>
+					<input type="number" name="id" class="form-control" [(ngModel)]="cel.id">
+				</div>
+
+				<div class="form-group">
+					<label for="marca"> MARCA: </label>
+					<input type="text" name="marca" class="form-control" [(ngModel)]="cel.marca">
+				</div>
+
+				<div class="form-group">
+					<label for="modelo"> MODELO: </label>
+					<input type="text" name="modelo" class="form-control" [(ngModel)]="cel.modelo">
+				</div>
+
+				<div class="form-group">
+					<label for="almacenamiento"> ALMACENAMIENTO: </label>
+					<input type="number" name="almacenamiento" class="form-control" [(ngModel)]="cel.almacenamiento">
+				</div>
+
+				<div class="form-group">
+					<label for="ram"> RAM </label>
+					<input type="number" name="ram" class="form-control" [(ngModel)]="cel.ram">
+				</div>
+
+				<div class="form-group">
+					<label for="procesador"> PROCESADOR: </label>
+					<input type="text" name="procesador" class="form-control" [(ngModel)]="cel.procesador">
+				</div>
+
+				<div class="form-group">
+					<label for="color"> COLOR: </label>
+					<input type="text" name="color" class="form-control" [(ngModel)]="cel.color">
+				</div>
+
+				<br>
+				<button class="btn btn-outline-success" (click)="guardar()"> GUARDAR </button>
+			</form>
+		</div>
+	</div>
+</div>
