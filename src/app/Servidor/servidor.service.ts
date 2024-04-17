@@ -19,7 +19,7 @@ export class ServidorService {
   }
 
   guardarCel(cel: Celulares) {
-    return this.http.post<String>(this.url + '/guardar', cel);
+    return this.http.post<string>(this.url + '/guardar', cel);
   }
 
 	buscarCel(cel: Celulares) {
@@ -27,11 +27,11 @@ export class ServidorService {
 	}
 
 	editarCel(cel: Celulares) {
-		return this.http.post<String>(this.url + '/editar', cel);
+		return this.http.post<string>(this.url + '/editar', cel);
 	}
 
 	eliminarCel(cel: Celulares) {
-		return this.http.post<String>(this.url + '/eliminar', cel);
+		return this.http.post<string>(this.url + '/eliminar', cel);
 	}
 
 	//Metodo personalizado

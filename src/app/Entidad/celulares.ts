@@ -10,10 +10,10 @@ export class Celulares {
   //Declaracion de una clase en TypeScript
 
   id!: number;
-  marca!: String;
-  modelo!: String;
+  marca!: string;
+  modelo!: string;
   almacenamiento!: number;
   ram!: number;
-  procesador!: String;
-  color!: String;
+  procesador!: string;
+  color!: string;
 }
